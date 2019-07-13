@@ -21,7 +21,7 @@ namespace seleniumEduProject
             
         }
         [Test]
-        public void TestMethod1()
+        public void OpenAndSearchInGoogle()
         {
             string sSearchFieldXPath = "xpath=//div[@id='fakebox']//input",
                 sSearched = "google",
