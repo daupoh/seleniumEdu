@@ -9,7 +9,7 @@ using OpenQA.Selenium.Support.UI;
 namespace seleniumEduProject
 {
     [TestClass]
-    public class UnitTest1
+    public class SimpleTest
     {
         IWebDriver m_pDriver;
         WebDriverWait m_pWait;
@@ -23,8 +23,7 @@ namespace seleniumEduProject
         [Test]
         public void OpenAndSearchInGoogle()
         {
-            string sSearchFieldXPath = "xpath=//div[@id='fakebox']//input",
-                sSearched = "google",
+            string sSearched = "google",
                 sDefaultTitle=" - Поиск в Google";
 
             m_pDriver.Url = "https://www.google.ru";  
