@@ -4,6 +4,8 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Support.UI;
 using System.Collections.Generic;
 
@@ -22,9 +24,19 @@ namespace seleniumEduProject
 
         [SetUp]
         public void initTests() {
-            m_pDriver = new ChromeDriver();
+            m_pDriver = getDriver('f');
             m_pWait = new WebDriverWait(m_pDriver,TimeSpan.FromSeconds(10));
             
+        }
+        IWebDriver getDriver(char b) {
+            IWebDriver result = null;
+            switch (b) {
+                case 'c': result = new ChromeDriver(); break;
+                case 'f': result = new FirefoxDriver(); break;
+                case 'e': result = new InternetExplorerDriver(); break;
+                default: break;
+            }
+            return result;
         }
         [TestCaseSource("GetLoginPassPairs")]
         public void Login(string login, string password)
