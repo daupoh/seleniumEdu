@@ -61,11 +61,42 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ACPage.cs" />
+    <Compile Include="litecart\adminsSections\appearence\CLogotypePage.cs" />
+    <Compile Include="litecart\adminsSections\appearence\CTemplatePage.cs" />
+    <Compile Include="litecart\adminsSections\catalog\CCatalog.cs" />
+    <Compile Include="litecart\adminsSections\catalog\CCSVImportExport.cs" />
+    <Compile Include="litecart\adminsSections\catalog\CDeliveryStatuses.cs" />
+    <Compile Include="litecart\adminsSections\catalog\CManufactures.cs" />
+    <Compile Include="litecart\adminsSections\catalog\COptionGroups.cs" />
+    <Compile Include="litecart\adminsSections\catalog\CProductGroups.cs" />
+    <Compile Include="litecart\adminsSections\catalog\CQuantityUnits.cs" />
+    <Compile Include="litecart\adminsSections\catalog\CSoldOutStatuses.cs" />
+    <Compile Include="litecart\adminsSections\catalog\CSuppliers.cs" />
+    <Compile Include="litecart\adminsSections\countries\CCountries.cs" />
+    <Compile Include="litecart\adminsSections\currencies\CCurrencies.cs" />
+    <Compile Include="litecart\adminsSections\customers\CCustomers.cs" />
+    <Compile Include="litecart\CAdminPage.cs" />
+    <Compile Include="litecart\CLoginPage.cs" />
+    <Compile Include="IPage.cs" />
     <Compile Include="testAppLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="litecart\adminsSections\geozones\" />
+    <Folder Include="litecart\adminsSections\languages\" />
+    <Folder Include="litecart\adminsSections\modules\" />
+    <Folder Include="litecart\adminsSections\orders\" />
+    <Folder Include="litecart\adminsSections\pages\" />
+    <Folder Include="litecart\adminsSections\reports\" />
+    <Folder Include="litecart\adminsSections\settings\" />
+    <Folder Include="litecart\adminsSections\slides\" />
+    <Folder Include="litecart\adminsSections\tax\" />
+    <Folder Include="litecart\adminsSections\users\" />
+    <Folder Include="litecart\adminsSections\vqmodes\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
