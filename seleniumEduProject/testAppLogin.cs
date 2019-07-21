@@ -24,9 +24,8 @@ namespace seleniumEduProject
 
         [SetUp]
         public void initTests() {
-            m_pDriver = getDriver('f');
-            m_pWait = new WebDriverWait(m_pDriver,TimeSpan.FromSeconds(10));
-            
+            m_pDriver = getDriver('f');           
+            m_pWait = new WebDriverWait(m_pDriver,TimeSpan.FromSeconds(10));            
         }
         IWebDriver getDriver(char b) {
             IWebDriver result = null;
