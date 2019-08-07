@@ -29,13 +29,14 @@ namespace seleniumEduProject
         }
        
         [TestCaseSource("GetLoginPassPairs")]
-        public void Login(string login, string password)
+        public void CheckAdminsSections(string login, string password)
         {
             m_pLoginPage.Go();
             m_pLoginPage.Login(login, password);
-            m_pAdminPage.OnIt();            
+            m_pAdminPage.OnIt();
+            m_pAdminPage.CheckAllSections();
         }
-
+        
         [TearDown]
         public void clearTests() {
             m_pDriver.Quit();
